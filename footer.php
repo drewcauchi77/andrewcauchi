@@ -14,6 +14,9 @@
 	<footer id="colophon" class="site-footer">
 		FOOTER
 	</footer><!-- #colophon -->
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+	<script src="/andrewcauchi/wp-content/themes/andrew/js/app.js"></script>
 </div><!-- #page -->
 
 </body>
