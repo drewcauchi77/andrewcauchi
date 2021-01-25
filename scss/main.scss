@@ -1,2 +1,5 @@
 // cd .\wp-content\themes\andrew
 // sass --watch scss/main.scss:style.css --style compressed
+
+@import "variables";
+@import "header";
