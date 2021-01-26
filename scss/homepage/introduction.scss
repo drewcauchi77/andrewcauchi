@@ -1,0 +1,26 @@
+.introduction-section{
+    .introduction-container{
+        height: 100%;
+        padding: 40px 0px;
+        .intro-details{
+            .intro-tagline{
+                width: 70%;
+                padding-bottom: 30px;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .intro-title{
+                width: 80%;
+                text-align: center;
+                margin: 0 auto;
+                padding-bottom: 30px;
+            }
+        }
+        .portfolio-image{
+            padding-bottom: 30px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

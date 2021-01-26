@@ -1,6 +1,10 @@
 $black: #2C2828;
+$white: #FFF;
+$orange: #ED534A;
+$orange-gradient: linear-gradient(54.44deg, #ED534A 7.79%, #FA7541 82.97%);
 
 $breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
 
 body{
     margin: 0px;
@@ -11,8 +15,56 @@ body{
     }
 }
 
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0px;
+}
+
+h1{
+    font-size: 27px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 21px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+
 .container{
     width: 85%;
     margin: 0 auto;
     max-width: 1680px;
+}
+
+a:active, a:focus, a{
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+}
+
+.orange-button{
+    width: 190px;
+    margin: 0 auto !important;
+    height: 50px;
+    background: $orange-gradient;
+    border-radius: 10px;
+    border: 1px solid $orange;
+    transition: 0.5s;
+    a{
+        line-height: 50px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-align: center;
+    }
+    &:hover{
+        background: white;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-tablet){
+    body{
+        overflow-y: scroll !important;
+    }
 }

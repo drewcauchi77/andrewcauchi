@@ -16,6 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, minimum-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/andrewcauchi/wp-content/themes/andrew/style.css">
 </head>
 
@@ -32,7 +34,7 @@
 			?>
 
 			<div class="site-logo">
-				<a href="#">
+				<a href="#" class="back-to-top">
 					<img src="<?= $fields['site_logo']['url']; ?>" alt="<?=$fields['site_logo']['alt']; ?>">
 				</a>
 			</div>
@@ -61,7 +63,7 @@
 	<div class="mobile-menu">
 		<ul>
 			<?php foreach($header_nav as $item) { ?>
-				<li class="<?= $item->classes[0]?>">
+				<li class="<?= $item->classes[0]; ?>">
 					<a href="<?= $item->url; ?>"><?= $item->title; ?></a>
 				</li>
 			<?php } ?>
