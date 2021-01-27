@@ -1,0 +1,73 @@
+.experience-section{
+    .experience-container{
+        height: 100%;
+        padding: 80px 0px;
+        .experience-details{
+            .title-section{
+                width: fit-content;
+                margin: 0 auto;
+                padding-bottom: 40px;
+                .title-design{
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    background-color: $orange;
+                    float: right;
+                    right: -50;
+                    margin-right: -4px;
+                }
+                .experience-title{
+                    font-weight: 700;
+                    text-align: center;
+                }
+            }
+            .experience-description{
+                text-align: center;
+                padding-bottom: 40px;
+            }
+            .languages-section{
+                display: grid;
+                grid-template-columns: repeat(2, 120px);
+                grid-column-gap: 30px;
+                margin: 0 auto;
+                justify-content: center;
+                grid-row-gap: 30px;
+                .language{
+                    display: grid;
+                    grid-template-rows: 60px 20px 20px;
+                    grid-row-gap: 10px;
+                    .language-icon{
+                        width: 60px;
+                        height: 60px;
+                        background-color: $grey;
+                        border-radius: 50%;
+                        position: relative;
+                        justify-self: center;
+                        align-self: center;
+                        img{
+                            width: 40px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            height: auto;
+                        }
+                    }
+                    .language-title, .language-percentage{
+                        justify-self: center;
+                        align-self: center;
+                        font-size: 18px;
+                        font-family: 'Nunito', sans-serif;
+                        font-weight: 700;
+                        text-align: center;
+                    }
+                    .language-percentage{
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+}

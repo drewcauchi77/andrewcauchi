@@ -1,7 +1,7 @@
 #masthead{
     position: sticky;
     top: 0;
-    background-color: $white;
+    background-color: rgba(256,256,256,0.9);
     z-index: 60;
     .header-container{
         display: grid;
@@ -104,6 +104,7 @@
     width: 100%;
     background-color: $white;
     transition: 0.5s;
+    z-index: 2;
     &.open{
         right: 0;
     }
@@ -188,6 +189,20 @@
                     li{
                         display: inline-block;
                         margin: 0px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg-desktop){
+    #masthead{
+        .header-container{
+            .desktop-navigation{
+                .d-menu{
+                    li{
+                        margin: 0px 40px;
                     }
                 }
             }

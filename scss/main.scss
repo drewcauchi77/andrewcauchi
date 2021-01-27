@@ -2,6 +2,10 @@
 // sass --watch scss/main.scss:style.css --style compressed
 
 @import "variables";
+@import "general";
+
 @import "header";
 
 @import "homepage/introduction";
+@import "homepage/about";
+@import "homepage/experience";

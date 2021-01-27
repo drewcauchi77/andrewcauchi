@@ -1,7 +1,7 @@
 .introduction-section{
     .introduction-container{
         height: 100%;
-        padding: 40px 0px;
+        padding-top: 50px;
         .intro-details{
             .intro-tagline{
                 width: 70%;
@@ -13,13 +13,147 @@
                 width: 80%;
                 text-align: center;
                 margin: 0 auto;
-                padding-bottom: 30px;
+                padding-bottom: 40px;
+            }
+            .portfolio-image{
+                width: 100%;
+                padding-bottom: 40px;
+            }
+            .buttons-section{
+                display: grid;
+                grid-template-rows: repeat(2, 50px);
+                grid-row-gap: 30px;
+                .button{
+                    &:not(.orange-button){
+                        margin: 0 auto;
+                        width: 190px;
+                        border: 1px solid $orange;
+                        border-radius: 5px;
+                        height: 50px;
+                        a{
+                            text-align: center;
+                            height: 100%;
+                            width: 100%;
+                            display: block;
+                            line-height: 50px;
+                            color: $orange;
+                        }
+                        &:hover{
+                            background: $orange-gradient;
+                            a{
+                                color: $black;
+                            }
+                        }
+                    }
+                    a{
+                        font-size: 18px;
+                        font-family: "Nunito",sans-serif;
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: $black;
+                    }
+                }
             }
         }
-        .portfolio-image{
-            padding-bottom: 30px;
-            img{
-                width: 100%;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-mobile){
+    .introduction-section{
+        .introduction-container{
+            .intro-details{
+                .buttons-section{
+                    grid-template-rows: unset;
+                    grid-template-columns: repeat(2, 200px);
+                    margin: 0 auto;
+                    justify-content: center;
+                    grid-column-gap: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-tablet){
+    .introduction-section{
+        .introduction-container{
+            padding-top: 80px;
+            .intro-details{
+                .intro-tagline{
+                    width: 100%;
+                }
+                .intro-title{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-desktop){
+    .introduction-section{
+        height: calc(100vh - 90px);
+        position: relative;
+        .introduction-container{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: fit-content;
+            padding: 0px;
+            .intro-details{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: 'tagline image'
+                    'title image'
+                    'buttons image';
+                grid-column-gap: 30px;
+                grid-row-gap: 30px;
+                grid-template-rows: 50px 275px 50px;
+                .intro-tagline{
+                    grid-area: tagline;
+                    text-align: left;
+                    padding: 0px;
+                    align-self: end;
+                }
+                .intro-title{
+                    grid-area: title;
+                    text-align: left;
+                    padding: 0px;
+                    align-self: center;
+                }
+                .portfolio-image{
+                    grid-area: image;
+                    padding: 0px;
+                    align-self: center;
+                }
+                .buttons-section{
+                    grid-area: buttons;
+                    justify-content: start;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg-desktop){
+    .introduction-section{
+        .introduction-container{
+            .intro-details{
+                grid-column-gap: 100px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-xl-desktop){
+    .introduction-section{
+        .introduction-container{
+            .intro-details{
+                grid-template-rows: 50px 220px 50px;
             }
         }
     }
