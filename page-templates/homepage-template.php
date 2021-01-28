@@ -2,7 +2,7 @@
 
 get_header();
 $fields = get_fields();
-//var_dump($fields);
+var_dump($fields['recent_work_section']);
 ?>
 
 <?php if($fields['introduction_section']['show_section'] == true){ ?>
@@ -68,6 +68,34 @@ $fields = get_fields();
                             </div>
                             <span class="language-percentage"><?= $language['percentage']; ?>%</span>
                             <h3 class="language-title"><?= $language['title']; ?></h3>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php } ?>
+
+<?php if($fields['recent_work_section']['show_section'] == true){ ?>
+    <section class="section projects-section" id="projects">
+        <div class="container projects-container">
+            <div class="projects-details">
+                <div class="title-section">
+                    <div class="title-design"></div>
+                    <h2 class="projects-title"><?= $fields['recent_work_section']['title']; ?></h2>
+                </div>
+                <div class="projects-description"><?php echo $fields['recent_work_section']['tagline']; ?></div>
+                <div class="work-section">
+                    <?php foreach($fields['recent_work_section']['projects'] as $project){ ?>
+                        <div class="project">
+                            <?php 
+                            $projectFields = get_fields($project['post']->ID);
+                            $projectFeaturedImage = wp_get_attachment_url(get_post_thumbnail_id($project['post']->ID));
+                            var_dump($projectFeaturedImage);
+                            var_dump($projectFields['website_link']); 
+                            var_dump($projectFields['website_logo']['url']);
+                            ?>
+                            <div class="project-description"><?= $project['post']->post_content; ?></div>
                         </div>
                     <?php } ?>
                 </div>

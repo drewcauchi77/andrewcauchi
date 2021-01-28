@@ -1,0 +1,33 @@
+.projects-section{
+    background-color: $grey;
+    .projects-container{
+        height: 100%;
+        padding: 80px 0px;
+        .title-section{
+            width: fit-content;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            .title-design{
+                width: 30px;
+                height: 6px;
+                background-color: $orange;
+                transform: rotate(-51.53deg);
+                margin-left: -25px;
+                border-radius: 6px;
+            }
+            .projects-title{
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+        .projects-description{
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-desktop){
+    .projects-section{
+        border-radius: 35% 35% 0% 0%;
+    }
+}

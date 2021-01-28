@@ -71,3 +71,50 @@
         }
     }
 }
+
+@media only screen and (min-width: $breakpoint-mobile){
+    .experience-section{
+        .experience-container{
+            .experience-details{
+                .languages-section{
+                    grid-template-columns: repeat(3, 120px);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-invert){
+    .experience-section{
+        .experience-container{
+            .experience-details{
+                .languages-section{
+                    grid-template-columns: repeat(4, 120px);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-desktop){
+    .experience-section{
+        .experience-container{
+            .experience-details{
+                padding: 0px 80px;
+                .title-section, .experience-description{
+                    padding-bottom: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg-desktop){
+    .experience-section{
+        .experience-container{
+            .experience-details{
+                padding: 0 10%;
+            }
+        }
+    }
+}
