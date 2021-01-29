@@ -2,7 +2,7 @@
 
 get_header();
 $fields = get_fields();
-var_dump($fields['recent_work_section']);
+//var_dump($fields);
 ?>
 
 <?php if($fields['introduction_section']['show_section'] == true){ ?>
@@ -91,11 +91,20 @@ var_dump($fields['recent_work_section']);
                             <?php 
                             $projectFields = get_fields($project['post']->ID);
                             $projectFeaturedImage = wp_get_attachment_url(get_post_thumbnail_id($project['post']->ID));
-                            var_dump($projectFeaturedImage);
-                            var_dump($projectFields['website_link']); 
-                            var_dump($projectFields['website_logo']['url']);
                             ?>
-                            <div class="project-description"><?= $project['post']->post_content; ?></div>
+                            <div class="project-images" style="background: url('<?= $projectFeaturedImage; ?>');">
+                                <a href="<?= $projectFields['website_link']; ?>" target="_blank">
+                                    <img class="project-logo" src="<?= $projectFields['website_logo']['url']; ?>" alt="<?= $projectFields['website_logo']['alt']; ?>">
+                                </a>
+                            </div>
+                            <div class="project-description">
+                                <span class="description-text"><?= $project['post']->post_content; ?></span>
+                            </div>
+                            <div class="project-link">
+                                <a href="<?= $projectFields['website_link']; ?>" target="_blank">
+                                    Visit Website
+                                </a>
+                            </div>
                         </div>
                     <?php } ?>
                 </div>

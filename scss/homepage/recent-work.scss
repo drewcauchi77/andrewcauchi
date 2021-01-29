@@ -22,12 +22,124 @@
         }
         .projects-description{
             text-align: center;
+            padding-bottom: 40px;
+        }
+        .work-section{
+            .project{
+                margin-bottom: 30px;
+                display: grid;
+                grid-template-rows: 200px 150px 90px;
+                .project-images{
+                    height: 200px;
+                    position: relative;
+                    border-radius: 10px 10px 0px 0px;
+                    a{
+                        height: 100%;
+                        width: 100%;
+                        display: block;
+                        .project-logo{
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            margin: auto;
+                            max-height: 80%;
+                            width: auto;
+                            max-width: 60%;
+                        }
+                    }
+                }
+                .project-description{
+                    text-align: center;
+                    padding: 0px 15px;
+                    justify-self: center;
+                    align-self: center;
+                    font-size: 18px;
+                    font-family: "Nunito",sans-serif;
+                    font-weight: 600;
+                    text-align: center;
+                    height: 100%;
+                    display: grid;
+                    background-color: $white;
+                    .description-text{
+                        align-self: center;
+                        justify-self: center;
+                    }
+                }
+                .project-link{
+                    border-radius: 0px 0px 10px 10px;
+                    background-color: white;
+                    padding: 10px 0px 30px;
+                    a{
+                        margin: 0 auto;
+                        width: 190px;
+                        border: 1px solid $orange;
+                        border-radius: 5px;
+                        height: 50px;
+                        display: block;
+                        text-align: center;
+                        line-height: 50px;
+                        color: $orange;
+                        font-size: 18px;
+                        font-family: "Nunito",sans-serif;
+                        font-weight: 600;
+                        text-decoration: none;
+                        &:hover{
+                            background: $orange-gradient;
+                            color: $black;
+                        }
+                    }
+                }
+                &:nth-child(7), &:nth-child(8), &:nth-child(9){
+                    display: none;
+                }
+            }
         }
     }
 }
 
+@media only screen and (min-width: $breakpoint-tablet){
+    .projects-section{
+        .projects-container{
+            .work-section{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 30px;
+            }
+        }
+    }
+}
 @media only screen and (min-width: $breakpoint-desktop){
     .projects-section{
-        border-radius: 35% 35% 0% 0%;
+        // border-radius: 9% 9% 0% 0%;
+        .projects-container{
+            .projects-details{
+                padding: 0 80px;
+                .title-section, .projects-description{
+                    padding-bottom: 60px;
+                }
+                .work-section{
+                    grid-template-columns: repeat(3, 1fr);
+                    .project{
+                        &:nth-child(7), &:nth-child(8), &:nth-child(9){
+                            display: block;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg-desktop){
+    .projects-section{
+        .projects-container{
+            .projects-details{
+                padding: 0 10%;
+            }
+            
+        }
     }
 }
