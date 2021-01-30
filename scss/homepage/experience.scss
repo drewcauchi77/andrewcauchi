@@ -26,16 +26,17 @@
                 padding-bottom: 40px;
             }
             .languages-section{
-                display: grid;
-                grid-template-columns: repeat(2, 120px);
-                grid-column-gap: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                width: 80%;
                 margin: 0 auto;
-                justify-content: center;
-                grid-row-gap: 30px;
                 .language{
                     display: grid;
                     grid-template-rows: 60px 20px 20px;
                     grid-row-gap: 10px;
+                    width: 50%;
+                    margin-bottom: 30px;
                     .language-icon{
                         width: 60px;
                         height: 60px;
@@ -77,7 +78,9 @@
         .experience-container{
             .experience-details{
                 .languages-section{
-                    grid-template-columns: repeat(3, 120px);
+                    .language{
+                        width: 32%;
+                    }
                 }
             }
         }
@@ -89,7 +92,9 @@
         .experience-container{
             .experience-details{
                 .languages-section{
-                    grid-template-columns: repeat(4, 120px);
+                    .language{
+                        width: 25%;
+                    }
                 }
             }
         }
@@ -103,6 +108,9 @@
                 padding: 0px 80px;
                 .title-section, .experience-description{
                     padding-bottom: 60px;
+                }
+                .languages-section{
+                    width: 70%;
                 }
             }
         }

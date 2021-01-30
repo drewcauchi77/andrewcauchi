@@ -29,10 +29,15 @@
                 margin-bottom: 30px;
                 display: grid;
                 grid-template-rows: 200px 150px 90px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
                 .project-images{
                     height: 200px;
                     position: relative;
                     border-radius: 10px 10px 0px 0px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                     a{
                         height: 100%;
                         width: 100%;
@@ -52,7 +57,6 @@
                 }
                 .project-description{
                     text-align: center;
-                    padding: 0px 15px;
                     justify-self: center;
                     align-self: center;
                     font-size: 18px;
@@ -62,9 +66,11 @@
                     height: 100%;
                     display: grid;
                     background-color: $white;
+                    width: 100%;
                     .description-text{
                         align-self: center;
                         justify-self: center;
+                        width: 90%;
                     }
                 }
                 .project-link{
@@ -91,9 +97,6 @@
                         }
                     }
                 }
-                &:nth-child(7), &:nth-child(8), &:nth-child(9){
-                    display: none;
-                }
             }
         }
     }
@@ -103,16 +106,20 @@
     .projects-section{
         .projects-container{
             .work-section{
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-column-gap: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin: 0 auto;
+                .project{
+                    width: 48%;
+                }
             }
         }
     }
 }
 @media only screen and (min-width: $breakpoint-desktop){
     .projects-section{
-        // border-radius: 9% 9% 0% 0%;
+        border-radius: 50% 50% 0% 0% / 90px;
         .projects-container{
             .projects-details{
                 padding: 0 80px;
@@ -120,11 +127,8 @@
                     padding-bottom: 60px;
                 }
                 .work-section{
-                    grid-template-columns: repeat(3, 1fr);
                     .project{
-                        &:nth-child(7), &:nth-child(8), &:nth-child(9){
-                            display: block;
-                        }
+                        width: 31%;
                     }
                 }
             }

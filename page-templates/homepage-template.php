@@ -92,7 +92,7 @@ $fields = get_fields();
                             $projectFields = get_fields($project['post']->ID);
                             $projectFeaturedImage = wp_get_attachment_url(get_post_thumbnail_id($project['post']->ID));
                             ?>
-                            <div class="project-images" style="background: url('<?= $projectFeaturedImage; ?>');">
+                            <div class="project-images" style="background-image: url('<?= $projectFeaturedImage; ?>');">
                                 <a href="<?= $projectFields['website_link']; ?>" target="_blank">
                                     <img class="project-logo" src="<?= $projectFields['website_logo']['url']; ?>" alt="<?= $projectFields['website_logo']['alt']; ?>">
                                 </a>
@@ -105,6 +105,37 @@ $fields = get_fields();
                                     Visit Website
                                 </a>
                             </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php } ?>
+
+<?php if($fields['latest_blogs_section']['show_section'] == true){ ?>
+    <section class="section blogs-section" id="blogs">
+        <div class="container blogs-container">
+            <div class="blogs-details">
+                <div class="title-section">
+                    <div class="title-design"></div>
+                    <h2 class="blogs-title"><?= $fields['latest_blogs_section']['title']; ?></h2>
+                </div>
+                <div class="blogs-section">
+                    <?php foreach($fields['latest_blogs_section']['blogs'] as $blog){ ?>
+                        <div class="blog">
+                            <?php 
+                            $blogCategory = get_the_category($blog['post']->ID);
+                            $time = strtotime($blog['post']->post_date);
+                            $date = date('d M Y');
+                            $blogFeaturedImage = wp_get_attachment_url(get_post_thumbnail_id($blog['post']->ID));
+                            ?>
+                            <a href="<?= get_permalink($blog['post']->ID); ?>" target="_blank">
+                                <img class="blog-image" src="<?= $blogFeaturedImage; ?>" alt="<?= $blog['post']->post_title; ?>">
+                                <span class="blog-category"><?= $blogCategory[0]->name; ?></span>
+                                <h3 class="blog-title"><?= $blog['post']->post_title; ?></h3>
+                                <span class="blog-date"><?= $date; ?></span>
+                            </a>
                         </div>
                     <?php } ?>
                 </div>
