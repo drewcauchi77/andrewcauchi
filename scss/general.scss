@@ -2,13 +2,19 @@ body{
     margin: 0px;
     overflow-x: hidden;
     overflow-y: scroll;
+    cursor: none;
     &.stop-scroll{
         overflow-y: hidden;
     }
 }
 
+a{
+    cursor: none;
+}
+
 h1, h2, h3, h4, h5, h6, p{
     margin: 0px;
+    color: $black;
 }
 
 h1{
@@ -107,4 +113,29 @@ body::-webkit-scrollbar-thumb
     h2{
         font-size: 30px;
     }
+}
+
+.cursor-dot, .cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: $orange;
+}
+
+.cursor-dot-outline {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(63, 61, 63, 0.2);
 }

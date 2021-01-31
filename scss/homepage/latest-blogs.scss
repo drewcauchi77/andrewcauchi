@@ -1,0 +1,136 @@
+.blogs-section{
+    .blogs-container{
+        height: 100%;
+        padding: 80px 0px;
+        .blogs-details{
+            .title-section{
+                width: fit-content;
+                margin: 0 auto;
+                padding-bottom: 40px;
+                position: relative;
+                .title-design{
+                    width: 25px;
+                    height: 25px;
+                    background-color: #ed534a;
+                    transform: rotate(-112.92deg);
+                    border-radius: 6px;
+                    position: absolute;
+                    right: -30px;
+                    top: -20px;
+                }
+                .projects-title{
+                    font-weight: 700;
+                    text-align: center;
+                }
+            }
+            .blogs-section{
+                .blog{
+                    width: 100%;
+                    margin-bottom: 30px;
+                    .inner-container{
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: $grey;
+                        a{
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            display: grid;
+                            grid-template-rows: 200px 30px 80px 30px;
+                            text-decoration: none;
+                            grid-row-gap: 10px;
+                            .blog-image{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                            .blog-category{
+                                text-transform: uppercase;
+                                font-size: 16px;
+                                font-family: "Nunito",sans-serif;
+                                font-weight: 600;
+                                align-self: center;
+                                color: $orange;
+                            }
+                            .blog-title{
+                                font-size: 18px;
+                                font-family: "Nunito",sans-serif;
+                                font-weight: 600;
+                                align-self: center;
+                            }
+                            .blog-date{
+                                display: grid;
+                                grid-template-columns: 20px auto;
+                                grid-column-gap: 10px;
+                                img{
+                                    width: 20px;
+                                    align-self: center;
+                                }
+                                .date{
+                                    color: $alternate-grey;
+                                    font-size: 16px;
+                                    font-family: "Nunito",sans-serif;
+                                    font-weight: 600;
+                                    align-self: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-tablet){
+    .blogs-section{
+        .blogs-container{
+            .blogs-details{
+                .blogs-section{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    margin: 0 auto;
+                    .blog{
+                        width: 48%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-desktop){
+    .blogs-section{
+        .blogs-container{
+            .blogs-details{
+                padding: 0 80px;
+                .title-section{
+                    padding-bottom: 60px;
+                }
+                .blogs-section{
+                    .blog{
+                        width: 31%;
+                        .inner-container{
+                            a{
+                                grid-template-rows: 200px 30px 90px 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg-desktop){
+    .blogs-section{
+        .blogs-container{
+            .blogs-details{
+                padding: 0 10%;
+            }
+        }
+    }
+}
