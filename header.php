@@ -23,6 +23,8 @@
 
 <body>
 <div id="page" class="site">
+	<div class="cursor-dot-outline"></div>
+	<div class="cursor-dot"></div>
 
 	<header id="masthead" class="site-header">
 		<div class="container header-container">
@@ -34,7 +36,7 @@
 			?>
 
 			<div class="site-logo">
-				<a href="#" class="back-to-top">
+				<a href="/" class="back-to-top">
 					<img src="<?= $fields['site_logo']['url']; ?>" alt="<?=$fields['site_logo']['alt']; ?>">
 				</a>
 			</div>

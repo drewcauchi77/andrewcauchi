@@ -33,7 +33,7 @@ $fields = get_fields();
                 <div class="about-details">
                     <h2 class="about-title"><?= $fields['about_section']['title']; ?></h2>
                     <img src="<?= get_template_directory_uri(); ?>/imgs/about-section.svg" class="title-design">
-                    <div class="about-description"><?php echo $fields['about_section']['tagline']; ?></div>
+                    <div class="about-description"><?= $fields['about_section']['tagline']; ?></div>
                     <div class="roles-section">
                         <?php foreach($fields['about_section']['roles'] as $role){ ?>
                             <div class="role">
@@ -60,7 +60,7 @@ $fields = get_fields();
                         <div class="title-design"></div>
                         <h2 class="experience-title"><?= $fields['experience_section']['title']; ?></h2>
                     </div>
-                    <div class="experience-description"><?php echo $fields['experience_section']['tagline']; ?></div>
+                    <div class="experience-description"><?= $fields['experience_section']['tagline']; ?></div>
                     <div class="languages-section">
                         <?php foreach($fields['experience_section']['languages'] as $language){ ?>
                             <div class="language">
@@ -85,7 +85,7 @@ $fields = get_fields();
                         <div class="title-design"></div>
                         <h2 class="projects-title"><?= $fields['recent_work_section']['title']; ?></h2>
                     </div>
-                    <div class="projects-description"><?php echo $fields['recent_work_section']['tagline']; ?></div>
+                    <div class="projects-description"><?= $fields['recent_work_section']['tagline']; ?></div>
                     <div class="work-section">
                         <?php foreach($fields['recent_work_section']['projects'] as $project){ ?>
                             <div class="project">
@@ -129,7 +129,7 @@ $fields = get_fields();
                                     <?php 
                                     $blogCategory = get_the_category($blog['post']->ID);
                                     $time = strtotime($blog['post']->post_date);
-                                    $date = date('d M Y');
+                                    $date = date('d M Y', $time);
                                     $blogFeaturedImage = wp_get_attachment_url(get_post_thumbnail_id($blog['post']->ID));
                                     ?>
                                     <a href="<?= get_permalink($blog['post']->ID); ?>">

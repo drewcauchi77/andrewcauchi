@@ -1,0 +1,81 @@
+.site-footer{
+    position: relative;
+    .footer-contact-section{
+        z-index: 3;
+        position: relative;
+        max-width: 1148px;
+        margin: 0 auto;
+        .footer-contact-container{
+            background: $orange-gradient;
+            border-radius: 10px;
+            padding: 40px 0px;
+            .footer-contact-details{
+                padding: 40px;
+                text-align: center;
+                .footer-contact-title{
+                    color: $white;
+                    padding-bottom: 30px;
+                }
+                .footer-contact-description{
+                    padding-bottom: 30px;
+                    p{
+                        color: $white;
+                    }
+                }
+                .footer-contact-link{
+                    a{
+                        margin: 0 auto;
+                        width: 190px;
+                        border: 1px solid $black;
+                        border-radius: 5px;
+                        height: 50px;
+                        display: block;
+                        text-align: center;
+                        line-height: 50px;
+                        color: $white;
+                        font-size: 18px;
+                        font-family: "Nunito",sans-serif;
+                        font-weight: 600;
+                        text-decoration: none;
+                        background-color: $black;
+                        &:hover{
+                            background-color: $white;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-nav-section{
+        background-color: $black;
+        position: absolute;
+        top: 400px;
+        bottom: -10px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        height: fit-content;
+        z-index: 2;
+        .footer-nav-container{
+            padding: 160px 0px 80px;
+            h1{
+                color: $white;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-desktop){
+    .site-footer{
+        .footer-contact-section{
+            padding: 0px 11%;
+        }
+        .footer-nav-section{
+            border-radius: 50% 50% 0% 0%/90px;
+            .footer-nav-container{
+                padding: 240px 0px 80px
+            }
+        }
+    }
+}
