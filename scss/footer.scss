@@ -1,14 +1,14 @@
 .site-footer{
     position: relative;
     .footer-contact-section{
-        z-index: 3;
-        position: relative;
         max-width: 1148px;
         margin: 0 auto;
         .footer-contact-container{
             background: $orange-gradient;
             border-radius: 10px;
             padding: 40px 0px;
+            z-index: 2;
+            position: relative;
             .footer-contact-details{
                 padding: 40px;
                 text-align: center;
@@ -49,18 +49,190 @@
     }
     .footer-nav-section{
         background-color: $black;
-        position: absolute;
-        top: 400px;
-        bottom: -10px;
-        right: 0;
-        left: 0;
-        margin: auto;
-        height: fit-content;
-        z-index: 2;
+        margin-top: -25px;
         .footer-nav-container{
-            padding: 160px 0px 80px;
-            h1{
-                color: $white;
+            padding: 80px 0px;
+            .footer-nav-details{
+                .left-section{
+                    padding-bottom: 60px;
+                    display: grid;
+                    grid-row-gap: 20px;
+                    .footer-logo{
+                        align-self: center;
+                        justify-self: center;
+                        height: 60px;
+                    }
+                    .footer-motto{
+                        text-align: center;
+                        font-size: 18px;
+                        font-family: "Nunito",sans-serif;
+                        font-weight: 400;
+                        color: $alternate-grey;
+                    }
+                }
+                .center-one-section{
+                    padding-bottom: 60px;
+                    display: grid;
+                    grid-row-gap: 20px;
+                    .footer-links-title{
+                        color: $white;
+                        font-size: 21px;
+                        font-family: "Nunito",sans-serif;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                    .footer-navigation{
+                        padding: 0px;
+                        margin: 0px;
+                        list-style: none;
+                        text-align: center;
+                        .navigation-item{
+                            margin-bottom: 10px;
+                            a{
+                                color: $alternate-grey;
+                                text-decoration: none;
+                                font-size: 18px;
+                                font-family: "Nunito",sans-serif;
+                                font-weight: 400;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+                .center-two-section{
+                    padding-bottom: 60px;
+                    display: grid;
+                    grid-row-gap: 20px;
+                    .footer-contact-title{
+                        color: $white;
+                        font-size: 21px;
+                        font-family: "Nunito",sans-serif;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                    .button{
+                        a{
+                            font-size: 18px;
+                            font-family: "Nunito",sans-serif;
+                            font-weight: 600;
+                            text-decoration: none;
+                            color: $white;
+                        }
+                        &:hover{
+                            background: $white;
+                            a{
+                                color: $orange;
+                            }
+                        }
+                    }
+                }
+                .right-section{
+                    padding-bottom: 60px;
+                    display: grid;
+                    grid-row-gap: 20px;
+                    .social-title{
+                        color: $white;
+                        font-size: 21px;
+                        font-family: "Nunito",sans-serif;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                    .social-links{
+                        .link{
+                            margin-bottom: 10px;
+                            a{
+                                display: grid;
+                                grid-template-columns: 20px 75px;
+                                grid-column-gap: 10px;
+                                justify-content: center;
+                                text-decoration: none;
+                                .link-icon{
+                                    width: 20px;
+                                }
+                                .link-title{
+                                    align-self: center;
+                                    color: $alternate-grey;
+                                    text-decoration: none;
+                                    font-size: 18px;
+                                    font-family: "Nunito",sans-serif;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+                .bottom-section{
+                    text-align: center;
+                    height: 40px;
+                    line-height: 40px;
+                    .rights{
+                        height: 100%;
+                        display: block;
+                        width: fit-content;
+                        margin: 0 auto;
+                        color: $alternate-grey;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-family: "Nunito",sans-serif;
+                        font-weight: 400;
+                        border-top: 1px solid $alternate-grey;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-tablet){
+    .site-footer{
+        .footer-nav-section{
+            .footer-nav-container{
+                .footer-nav-details{
+                    display: grid;
+                    grid-template-areas: 'leftsec leftsec'
+                        'centeronesec rightsec'
+                        'centertwosec centertwosec'
+                        'bottomsec bottomsec';
+                    .left-section{
+                        grid-area: leftsec;
+                    }
+                    .center-one-section{
+                        grid-area: centeronesec;
+                        width: 80%;
+                    }
+                    .center-two-section{
+                        grid-area: centertwosec;
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                    .right-section{
+                        grid-area: rightsec;
+                        width: 80%;
+                        justify-content: end;
+                    }
+                    .bottom-section{
+                        grid-area: bottomsec;
+                        .rights{
+                            border-top: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-invert){
+    .site-footer{
+        .footer-nav-section{
+            .footer-nav-container{
+                .footer-nav-details{
+                    grid-template-areas: 'leftsec leftsec leftsec'
+                        'centeronesec centertwosec rightsec'
+                        'bottomsec bottomsec bottomsec';
+                }
             }
         }
     }
@@ -74,7 +246,33 @@
         .footer-nav-section{
             border-radius: 50% 50% 0% 0%/90px;
             .footer-nav-container{
-                padding: 240px 0px 80px
+                padding: 100px 0px 80px;
+                .footer-nav-details{
+                    grid-template-areas: 'leftsec centeronesec centertwosec rightsec'
+                        'bottomsec bottomsec bottomsec bottomsec';
+                    .left-section{
+                        width: 80%;
+                        .footer-logo{
+                            justify-self: start;
+                        }
+                        .footer-motto{
+                            text-align: left;
+                        }
+                    }
+                    .center-one-section{
+                        .footer-links-title{
+                            text-align: left;
+                        }
+                        .footer-navigation{
+                            text-align: left;
+                        }
+                    }
+                    .bottom-section{
+                        .rights{
+                            float: left;
+                        }
+                    }
+                }
             }
         }
     }

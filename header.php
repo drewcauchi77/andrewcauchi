@@ -8,7 +8,7 @@
  *
  * @package andrew
  */
-
+global $post;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -20,8 +20,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/andrewcauchi/wp-content/themes/andrew/style.css">
 </head>
-
-<body>
+<body id="<?= $post->post_name?>-wp-page">
 <div id="page" class="site">
 	<div class="cursor-dot-outline"></div>
 	<div class="cursor-dot"></div>

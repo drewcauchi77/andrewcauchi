@@ -1,0 +1,36 @@
+.error-404{
+    height: 70vh;
+    position: relative;
+    .page-content{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: fit-content;
+        text-align: center;
+        .page-title{
+            padding-bottom: 30px;
+        }
+        .orange-button{
+            a{
+                font-size: 18px;
+                font-family: "Nunito",sans-serif;
+                font-weight: 600;
+                text-decoration: none;
+                color: #2c2828;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-desktop){
+    .error-404{
+        .page-content{
+            .page-title{
+                padding-bottom: 60px;
+            }
+        }
+    }
+}
