@@ -144,8 +144,18 @@ body::-webkit-scrollbar-thumb
     background-color: rgba(63, 61, 63, 0.2);
 }
 
-#home-wp-page{
-    .site-footer{
-        background-color: $grey;
+@media only screen and (max-width: 767px){
+    .cursor-dot, .cursor-dot-outline{
+        visibility: hidden;
     }
+}
+
+#home-wp-page{
+    .footer-nav-section{
+        margin-top: -25px;
+    }
+}
+
+.site-footer{
+    background-color: $grey;
 }

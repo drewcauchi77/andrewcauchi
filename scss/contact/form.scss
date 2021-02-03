@@ -1,0 +1,198 @@
+.contact-form-section{
+    background-color: $grey;
+    padding-bottom: 80px;
+    .contact-form-container{
+        height: 100%;
+        padding-top: 50px;
+        .form-details{
+            .form-title{
+                text-align: center;
+                padding-bottom: 30px;
+            }
+            .form-description{
+                text-align: center;
+                padding-bottom: 30px;
+            }
+            .form-contents{
+                position: relative;
+                .orange-circle{
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    background: $orange-gradient;
+                    position: absolute;
+                    top: -30px;
+                    right: -100px;
+                    margin: auto;
+                    z-index: 1;
+                }
+                .black-circle{
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    background: $black;
+                    position: absolute;
+                    bottom: 100px;
+                    left: -60px;
+                    margin: auto;
+                    z-index: 1;
+                }
+                .form{
+                    background-color: $white;
+                    padding: 30px 20px;
+                    border-radius: 10px;
+                    position: relative;
+                    z-index: 2;
+                    .wpcf7{
+                        form{
+                            .form-box{
+                                padding-bottom: 20px;
+                                label{
+                                    font-size: 18px;
+                                    font-family: "Nunito",sans-serif;
+                                    font-weight: 600;
+                                    text-align: center;
+                                    span{
+                                        input, textarea{
+                                            width: 98%;
+                                            margin-top: 10px;
+                                            border-radius: 5px;
+                                            border: 1px solid $alternate-grey;
+                                            font-size: 16px; 
+                                            font-family: "Nunito","FontAwesome";
+                                            font-weight: 400;
+                                            padding: 12px 4px;
+                                        }
+                                        input{
+                                            height: 35px;
+                                        }
+                                        textarea{
+                                            height: 300px;
+                                        }
+                                    }
+                                }
+                            }
+                            .submit-box{
+                                text-align: center;
+                                .wpcf7-submit{
+                                    width: 190px;
+                                    margin: 0 auto !important;
+                                    height: 50px;
+                                    background: $orange-gradient;
+                                    border-radius: 5px;
+                                    border: 1px solid $orange;
+                                    font-size: 18px;
+                                    font-family: "Nunito",sans-serif;
+                                    font-weight: 600;
+                                    text-decoration: none;
+                                    color: $white;
+                                    &:hover{
+                                        background: $white;
+                                        color: $orange;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-tablet){
+    .contact-form-section{
+        .contact-form-container{
+            .form-details{
+                .form-contents{
+                    .form{
+                        .wpcf7{
+                            form{
+                                display: grid;
+                                grid-template-areas: 'name email'
+                                    'message message'
+                                    'submit submit';
+                                grid-column-gap: 20px;
+                                input{
+                                    width: 96% !important;
+                                }
+                                .name-box{
+                                    grid-area: name;
+                                }
+                                .email-box{
+                                    grid-area: email;
+                                }
+                                .message-box{
+                                    grid-area: message;
+                                    textarea{
+                                        width: 98.5% !important;
+                                    }
+                                }
+                                .submit-box{
+                                    grid-area: submit;
+                                    input{
+                                        width: 190px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-invert){
+    .contact-form-section{
+        .contact-form-container{
+            .form-details{
+                .form-contents{
+                    .form{
+                        padding: 60px 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-desktop){
+    .contact-form-section{
+        .contact-form-container{
+            .form-details{
+                padding: 0 80px;
+                .form-title, .form-description{
+                    padding-bottom: 60px;
+                }
+                .form-box{
+                    padding-bottom: 40px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg-desktop){
+    .contact-form-section{
+        .contact-form-container{
+            .form-details{
+                padding: 0 10%;
+            }
+        }
+    }
+}
+
+.wpcf7-response-output{
+    display: none;
+}
+
+.screen-reader-response{
+    padding-bottom: 40px;
+    p{
+        color: red;
+    }
+    ul{
+        display: none;
+    }
+}

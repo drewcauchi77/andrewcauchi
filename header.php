@@ -15,9 +15,11 @@ global $post;
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, minimum-scale=1">
+	<title>Andrew Cauchi</title>
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="/andrewcauchi/wp-content/themes/andrew/style.css">
 </head>
 <body id="<?= $post->post_name?>-wp-page">
